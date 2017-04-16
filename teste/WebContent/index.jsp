@@ -7,23 +7,42 @@
 <title>Login</title>
 </head>
 <body>
-<%	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-	String data = sdf.format(new Date());
-%>
-Hortolândia, <%=data %>
-	<center>
-		<h1><% out.print ("Login"); %></h1>
+	<div>
 		
-		<fieldset>
-			<form action="home.jsp">
-				<p>Usuário: <input type="text" name="usuario" id="usuario"></p>
-				<p>Senha: <input type="password" name="senha" id="senha"></p>
-				<p>Confirmação de Senha: <input type="password" name="confirmaSenha" id="confirmaSenha"></p>
-				<button type="submit" value="Enviar"> Enviar </button>
-				<button type="reset" value="limpar"> Limpar </button>
-			</form>
-		</fieldset>
-	</center>
+		<%	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			String data = sdf.format(new Date());
+		%>
+		
+		<p>Hortolândia, <%=data %></p>
+		
+		<% 
+			String texto = "";	
+			
+			if (request.getParameter("texto") != null){
+				texto = request.getParameter("texto");
+			}
+		%>
+		<b><p align="center"><font color="red"><%=texto %> </font></p></b>
+	</div>
 	
+	<div>
+		<center>
+			<h1><% out.print ("Login"); %></h1>
+		
+			<fieldset>
+				<form action="home.jsp">
+					<p>Usuário: <input type="text" name="usuario" id="usuario"></p>
+					<p>Senha: <input type="password" name="senha" id="senha"></p>
+					<p>Confirmação de Senha: <input type="password" name="confirmaSenha" id="confirmaSenha"></p>
+					<button type="submit" value="Enviar"> Enviar </button>
+					<button type="reset" value="limpar"> Limpar </button>
+				</form>
+			</fieldset>
+		</center>
+	</div>
+	
+	<div>
+		<%@include file='footer.jsp'%>
+	</div>
 </body>
 </html>

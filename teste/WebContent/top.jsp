@@ -12,6 +12,11 @@
 	String data = sdf.format(new Date());
 	%>
 	<p>Hortolândia, <%=data %></p>
-	<p align="right">Obrigado, <%= session.getAttribute("nome")  %></p>
+	
+	<% if ((session.getAttribute("logado")) == "sim"){%>
+		<p align="right">Logado como <%= session.getAttribute("nome")  %></p>
+	<% }else {%>
+		<p align="right"><%= session.getAttribute("nome")  %></p>
+	<% };%>
 </body>
 </html>

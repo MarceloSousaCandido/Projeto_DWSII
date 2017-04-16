@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>Copyright © ${now.year + 1900} My Company</p>
+	<p align="center">Copyright © 2017 - E & M Software</p>
 </body>
 </html>

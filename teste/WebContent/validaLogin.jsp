@@ -9,7 +9,7 @@
 		session.setAttribute("logado", "sim");
 		session.setAttribute("nome", nome);		
 	}else{
-		session.setAttribute("logado", "n");
+		session.setAttribute("logado", "nao");
 		nome = "Usuário não Logado";
 		session.setAttribute("nome", nome);
 	}

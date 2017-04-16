@@ -11,7 +11,13 @@
 		<div><%@include file='top.jsp'%></div>
 		<div>	
 		<fieldset>
-		
+			<% if ((session.getAttribute("logado")) == "sim"){%>
+				<%-- aqui colocar o include da pagina com nome de content ou body --%>
+			<% }else {%>
+				<jsp:forward page="index.jsp">
+					<jsp:param name="texto" value="Não foi possível logar" />
+				</jsp:forward>
+			<% };%>
 		
 		
 		</fieldset>
