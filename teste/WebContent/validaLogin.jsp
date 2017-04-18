@@ -1,3 +1,4 @@
+<%-- Arquivo que é chamado pela pagina index.jsp quando clicar no botão ENVIAR --%>
 <%
 	String nome = request.getParameter("usuario");
 	String senha = request.getParameter("senha");

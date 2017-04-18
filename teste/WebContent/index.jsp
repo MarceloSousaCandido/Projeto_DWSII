@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div>
-		
+		<%-- Abaixo segue como formatar a apresentção de data --%>
 		<%	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			String data = sdf.format(new Date());
 		%>
@@ -22,7 +22,7 @@
 				texto = request.getParameter("texto");
 			}
 		%>
-		<b><p align="center"><font color="red"><%=texto %> </font></p></b>
+		<b><p align="center"><font color="red"> <%=texto %> </font></p></b>
 	</div>
 	
 	<div>
