@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Footer</title>
+<title>Página de Erro</title>
 </head>
 <body>
-	<p align="center">Copyright © 2017 - E/M Software</p>
+	<h3> Por favor, inserir um valor válido para gerar a tabuada!</h3>
+	<input type="button" value="Voltar" onClick="history.go(-1)">
 </body>
 </html>

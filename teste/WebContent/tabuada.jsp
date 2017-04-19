@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,15 +8,13 @@
 <title>Tabuada</title>
 </head>
 <body>
+
 	<%-- usando Scriptlets com parametro para imprimir a tabuada --%>
 	<br/>
-	
-	Qual Tabuada Você Quer saber?  e pressione o botão:<br/>
-	
+	Qual Tabuada você quer saber e pressione o botão:<br/>
 	<form action="mostraTabuada.jsp">
-		Tabuado do: <input type ="text" name="num">
-
+		Tabuada do: <input type ="text" name="num" autofocus><input type="submit" value="Gerar Tabuada">
 	</form>
-	
+
 </body>
 </html>

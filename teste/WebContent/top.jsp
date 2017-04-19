@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1" import="java.util.Date" import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,11 +16,14 @@
 	<% if ((session.getAttribute("logado")) == "sim"){%>
 		<p align="right">
 			Logado como <%= session.getAttribute("nome")  %>
-			<button id="logout" name="logout">Logout</button>
+			<a href="logout.jsp"><img src="img/logout.png" border="0" style="cursor:hand"; onClick="logout.jsp"></a>
 			<%-- TODO fazer logica para encenar sessão e voltar a pagina index, sem sessão aberta --%>
 		</p>
 	<% }else {%>
-		<p align="right"><%= session.getAttribute("nome")  %></p>
+		<p align="right">
+			<%= session.getAttribute("nome")  %>
+			<a href="logout.jsp"><img src="img/login.png" border="0" style="cursor:hand"; onClick="logout.jsp"></a>
+		</p>
 	<% };%>
 	
 </body>

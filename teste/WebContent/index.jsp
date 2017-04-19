@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1" import="java.util.Date" import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -15,6 +15,8 @@
 		
 		<p>Hortolândia, <%=data %></p>
 		
+		<%--<%=session.getAttribute("nome") --%>
+		
 		<% 
 			String texto = "";	
 			
@@ -22,7 +24,6 @@
 				texto = request.getParameter("texto");
 			}
 		%>
-		<b><p align="center"><font color="red"> <%=texto %> </font></p></b>
 	</div>
 	
 	<div>
@@ -31,7 +32,7 @@
 		
 			<fieldset>
 				<form action="home.jsp">
-					<p>Usuário: <input type="text" name="usuario" id="usuario"></p>
+					<p>Usuário: <input type="text" name="usuario" id="usuario" autofocus></p>
 					<p>Senha: <input type="password" name="senha" id="senha"></p>
 					<p>Confirmação de Senha: <input type="password" name="confirmaSenha" id="confirmaSenha"></p>
 					<button type="submit" value="Enviar"> Enviar </button>
