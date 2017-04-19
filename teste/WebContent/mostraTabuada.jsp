@@ -8,7 +8,6 @@
 <title>Resultado da Tabuada do ${param.num} </title>
 </head>
 <body>
-
 	<div>
 		<p>Tabuada do ${param.num} </p>
 		<%int numero= Integer.parseInt( request.getParameter("num")); %><%--Tranformando String em Inteiro --%>	
